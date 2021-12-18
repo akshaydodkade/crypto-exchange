@@ -5,7 +5,6 @@ import { Navbar, Homepage, Exchanges, Cryptocurrencies, CryptoDetails, News } fr
 import "./App.css";
 
 const App = () => {
-  console.log('here -->');
   return (
     <div className='app'>
       <div className='navbar'>
