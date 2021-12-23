@@ -24,7 +24,7 @@ const App = () => {
         </Layout>
         <div className='footer'>
           <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>
-            Crypto Exchange <br />
+            Crypto Time <br />
             All rights reserved.
           </Typography.Title>
           <Space>
