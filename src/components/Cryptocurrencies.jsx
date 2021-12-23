@@ -3,6 +3,7 @@ import millify from 'millify';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useGetCryptosQuery } from '../services/cryptoApi';
+import Loader from './Loader';
 
 const { Text } = Typography;
 
@@ -17,7 +18,7 @@ export default function Cryptocurrencies({ simplified }) {
     const filteredData = cryptoList?.data?.coins.filter(coin => coin.name.toLowerCase().includes(searchTerm.toLowerCase()));
     setCryptos(filteredData);
   }, [cryptoList, searchTerm]);
-  if (isFetching) return 'Loading...';
+  if (isFetching) return <Loader />;
 
   return (
     <>

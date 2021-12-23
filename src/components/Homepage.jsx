@@ -4,6 +4,7 @@ import { useGetCryptosQuery } from '../services/cryptoApi';
 import millify from 'millify';
 import { Cryptocurrencies, News } from "../components";
 import { Link } from 'react-router-dom';
+import Loader from './Loader';
 
 const { Title } = Typography;
 
@@ -11,7 +12,7 @@ export default function Homepage() {
   const { data, isFetching } = useGetCryptosQuery(10);
   const globalStats = data?.data?.stats;
 
-  if (isFetching) return 'Loading...';
+  if (isFetching) return <Loader />;
 
   return (
     <>
@@ -25,13 +26,13 @@ export default function Homepage() {
       </Row>
 
       <div className="home-heading-container">
-        <Title level={3} className='home-title'>Top 10 Cryptocurrencies in the World</Title>
+        <Title level={4} className='home-title'>Top Cryptocurrencies</Title>
         <Title level={5} className='show-more'><Link to='/cryptocurrencies'>Show More</Link></Title>
       </div>
       <Cryptocurrencies simplified />
 
       <div className="home-heading-container">
-        <Title level={3} className='home-title'>Latest News</Title>
+        <Title level={4} className='home-title'>Latest News</Title>
         <Title level={5} className='show-more'><Link to='/news'>Show More</Link></Title>
       </div>
       <News simplified />

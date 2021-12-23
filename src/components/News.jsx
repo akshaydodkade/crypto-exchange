@@ -3,6 +3,7 @@ import { Card, Col, Row, Typography, Avatar, Select } from 'antd';
 import moment from 'moment';
 import { useGetCryptosNewsQuery } from '../services/cryptoNewsApi';
 import { useGetCryptosQuery } from '../services/cryptoApi';
+import Loader from './Loader';
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -13,7 +14,7 @@ export default function News({ simplified }) {
   const { data } = useGetCryptosQuery(100);
 
   const { data: cryptoNews, isFetching } = useGetCryptosNewsQuery({ newsCategory, count });
-  if (!cryptoNews?.value) return 'Loading...';
+  if (!cryptoNews?.value) return <Loader />;
 
   const demoImage = `https://coinrevolution.com/wp-content/uploads/2020/06/cryptonews.jpg`;
 
@@ -39,7 +40,6 @@ export default function News({ simplified }) {
 
       {cryptoNews?.value.map((news, i) => (
         <Col xs={24} sm={12} lg={8} key={i}>
-          {console.log('news', news)}
           <Card className='news-card' hoverable>
             <a href={news.url} target='_blank' rel='noreferrer'>
               <div className="news-image-container">

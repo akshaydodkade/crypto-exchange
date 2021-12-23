@@ -197,6 +197,7 @@ a:hover{
 
 .stats{
   font-weight: 800;
+  margin-left: 10px;
 }
 
 .coin-value-statistics-heading p{
