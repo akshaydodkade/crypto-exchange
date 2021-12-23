@@ -25,13 +25,13 @@ const Exchanges = () => {
       </Row>
       <Row>
         {exchangesList.map((exchange) => (
-          <Col span={24}>
+          <Col span={24} key={exchange.id}>
             <Collapse>
               <Panel
                 key={exchange.id}
                 showArrow={false}
                 header={(
-                  <Row key={exchange.id}>
+                  <Row key={exchange.id} style={{ width: '100%' }}>
                     <Col span={6}>
                       <Text><strong>{exchange.rank}.</strong></Text>
                       <Avatar className="exchange-image" src={exchange.iconUrl} />
