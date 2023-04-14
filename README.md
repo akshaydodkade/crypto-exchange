@@ -1,6 +1,6 @@
 # Cryto Time - Application for real time updates and news on Crypto World
 
-#### Check out demo -  [crypto-time.netlify.app](https://crypto-time.netlify.app/)
+#### Check out demo -  [crypto-time.netlify.app](https://crypto-time.netlify.app/news)
 
 #### Core Features
 * Check for real time Crypto Pricing
