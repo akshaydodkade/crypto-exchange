@@ -15,7 +15,7 @@ const App = () => {
           <div className='routes'>
             <Routes>
               <Route path="/" exact element={<Homepage />}></Route>
-              <Route path="/exchanges" exact element={<Exchanges />}></Route>
+              {/* <Route path="/exchanges" exact element={<Exchanges />}></Route> */}
               <Route path="/cryptocurrencies" exact element={<Cryptocurrencies />}></Route>
               <Route path="/crypto/:coinId" exact element={<CryptoDetails />}></Route>
               <Route path="/news" exact element={<News />}></Route>
@@ -30,7 +30,7 @@ const App = () => {
           <Space>
             <Link to='/'>Home</Link>
             <Link to='/cryptocurrencies'>Cryptocurrencies</Link>
-            <Link to='/exchanges'>Exchange</Link>
+            {/* <Link to='/exchanges'>Exchange</Link> */}
             <Link to='/news'>News</Link>
           </Space>
         </div>
